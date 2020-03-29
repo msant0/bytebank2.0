@@ -47,8 +47,9 @@ class _ContactFormState extends State<ContactForm> {
                   child: Text('Create'),
                   onPressed: () {
                     final String name = _nameController.text;
-                    final int accountNumber = int.tryParse(_acountsNumberController.text);
-                    final Contact newContact = Contact(name,accountNumber);
+                    final int accountNumber =
+                        int.tryParse(_acountsNumberController.text);
+                    final Contact newContact = Contact(0, name, accountNumber);
                     Navigator.pop(context, newContact);
                   },
                 ),
